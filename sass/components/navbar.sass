@@ -2,6 +2,9 @@ $navbar-background-color: $white !default
 $navbar-box-shadow-size: 0 2px 0 0 !default
 $navbar-box-shadow-color: $background !default
 $navbar-height: 3.25rem !default
+// Breakpoint for minimum width when hamburger is hidden
+$navbar-breakpoint: $desktop !default
+
 $navbar-padding-vertical: 1rem !default
 $navbar-padding-horizontal: 2rem !default
 $navbar-z: 30 !default
@@ -262,7 +265,7 @@ a.navbar-item,
     &.has-navbar-fixed-bottom-touch
       padding-bottom: $navbar-height
 
-+desktop
++from($navbar-breakpoint)
   .navbar,
   .navbar-menu,
   .navbar-start,
